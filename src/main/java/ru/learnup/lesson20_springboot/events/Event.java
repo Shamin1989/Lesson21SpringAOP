@@ -1,6 +1,8 @@
 package ru.learnup.lesson20_springboot.events;
 
 import org.springframework.context.ApplicationEvent;
+import ru.learnup.lesson20_springboot.annotations.LogMethod;
+import ru.learnup.lesson20_springboot.annotations.WorkTime;
 
 public class Event extends ApplicationEvent {
 
@@ -10,7 +12,8 @@ public class Event extends ApplicationEvent {
         super(inputNumber);
         this.inputNumber = inputNumber;
     }
-
+    @LogMethod
+    @WorkTime
     public int getInputNumber() {
         return inputNumber;
     }

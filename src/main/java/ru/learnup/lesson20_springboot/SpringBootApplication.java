@@ -1,7 +1,10 @@
 package ru.learnup.lesson20_springboot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import ru.learnup.lesson20_springboot.aspects.EventAspect;
 import ru.learnup.lesson20_springboot.events.EventListener;
 import ru.learnup.lesson20_springboot.events.EventPublisher;
 
@@ -14,6 +17,8 @@ public class SpringBootApplication {
     public final static Locale locale = Locale.getDefault();
 
     public final static int hiddenNumber = (int) (Math.random() * 1000);
+
+    private static final Logger log = LoggerFactory.getLogger(SpringBootApplication.class);
 
     public static void main(String[] args) {
 
